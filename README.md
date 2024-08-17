@@ -5,14 +5,14 @@ For instance, loyal customers (Champions) can receive exclusive offers, potentia
 
 ## DETAIL
 - ### **Dataset:** captures transactional information from a retail business, providing detailed records of sales and customer interactions.
-  + InvoiceNo: a unique identifier for each transaction or invoice.
-  + StockCode: a unique identifier for each product.
-  + Description: a textual description of the product being sold.
-  + Quantity: the number of units of the product sold in the transaction.
-  + InvoiceDate: the date and time when the transaction was recorded.
-  + UnitPrice:  price of a single unit.
-  + CustomerID: a unique identifier for the customer who made the purchase.
-  + Country: country where the transaction took place.
+  + _InvoiceNo: a unique identifier for each transaction or invoice._
+  + _StockCode: a unique identifier for each product._
+  + _Description: a textual description of the product being sold._
+  + _Quantity: the number of units of the product sold in the transaction._
+  + _InvoiceDate: the date and time when the transaction was recorded._
+  + _UnitPrice:  price of a single unit._
+  + _CustomerID: a unique identifier for the customer who made the purchase._
+  + _Country: country where the transaction took place._
 ![image](https://github.com/user-attachments/assets/e81e43f5-4cd7-4843-ba4b-d8cd27f1898c)
 
 - ### **EDA: correct datatype, no missing values**
@@ -23,13 +23,13 @@ For instance, loyal customers (Champions) can receive exclusive offers, potentia
   ![image](https://github.com/user-attachments/assets/68e930e2-8a70-4b4b-978e-43fd8d839ce2)
 
   I want to clearify the way to fill mising values in CustomerID. There are 2 ways:
-    + Solution 1: based on InvoiceNo, forward fill CustomerID (1 InvoiceNo associates to only 1 CustomerID)
-    + Solution 2: fill fake CustomerID (we assump that null value in CustomerID is one-time visitor - bought once => fake CustomerID only appear once)
+    + **Solution 1**: based on InvoiceNo, **forward fill** CustomerID (1 InvoiceNo associates to only 1 CustomerID)
+    + **Solution 2**: **fill fake CustomerID** (we assump that null value in CustomerID is one-time visitor - bought once => fake CustomerID only appear once)
     After using solution 1, no missing values are replaced and we should not remove missing values because the number of that is too large **(Data is the New Gold)**. Therefore, using solution 2 to handle null values.
 
 - ### **Segmentation: RFM method**
 Because I do not have sense in this field, dataset is divided into 5 parts by quintile (basic method). 
-5 is the highest score corresponding to positive things, in contrast 1 is the lowest score corresponding to negative things.
+**5** is the highest score corresponding to **positive things**, in contrast **1** is the lowest score corresponding to **negative things**.
 
   + **Recency**: Calculate the number of days since the last purchase for each customer. The **most recent buyers** get a score of 5, while the least recent get a score of 1.
   + **Frequency**: Count the total number of purchases each customer has made. The **most frequent buyers** get a score of 5, while the least frequent get a score of 1.
@@ -42,7 +42,7 @@ Because I do not have sense in this field, dataset is divided into 5 parts by qu
 - ### **Conclusion**
   - **QUANTITY & MONETARY**
     + **Champions**: 1200 customers, highest avg spending (5000), 60% total revenue.
-    + **New Customers, Need Attention, At Risk, Loyal**: more customer, more spending, 5-9% total revenue (except for New Customer - 2% total revenue).
+    + **New Customers, Need Attention, At Risk, Loyal**: more customer, high spending, 5-9% total revenue (except for New Customer - 2% total revenue).
     + **Potential Loyalist, Lost customer, About to Sleep, Hibernating**: 600-800 customers, low spending < 500, less than 2% total revenue.
     + **Promising, Cannot Lose Them**: 200-400 customers, quite high spending (2000), 5-9% total revenue.
    
