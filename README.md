@@ -56,16 +56,3 @@ Because I do not have sense in this field, dataset is divided into 5 parts by qu
 ![image](https://github.com/user-attachments/assets/4f56251a-6284-401e-83c2-654bf55782ae)
 
 ![image](https://github.com/user-attachments/assets/003f40f6-f4f5-4c9d-b045-73ff4548f621)
-
-- ### **Strategy**
-  + **Champions**
-  + **Loyal**
-  + **Potential Loyalist**
-  + **New Customers**
-  + **Promising**
-  + **Need Attention**
-  + **About To Sleep**
-  + **At Risk**
-  + **Cannot Lose Them**
-  + **Hibernating Customers**
-  + **Lost Customers**
